@@ -4,8 +4,65 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rock Paper and Scissor game</title>
+    <script
+      src="https://kit.fontawesome.com/43da756c39.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
+    <main class="container">
+      <section class="game">
+        <div class="game-title">
+          <h1>Rock Paper Scissors Lizard Spock</h1>
+        </div>
+        <div class="container">
+          <section class="player">
+            <h2>You - 0</h2>
+            <div class="player-controls flex">
+              <i class="far fa-hand-rock hand-symbol"></i>
+              <i class="far fa-hand-paper hand-symbol"></i>
+              <i class="far fa-hand-scissors hand-symbol"></i>
+              <i class="far fa-hand-lizard hand-symbol"></i>
+              <i class="far fa-hand-spock hand-symbol"></i>
+            </div>
+          </section>
+          <section>
+            <section class="computer">
+              <h2>Computer - 0</h2>
+              <div class="computer-controls flex">
+                <i class="far fa-hand-rock hand-symbol"></i>
+                <i class="far fa-hand-paper hand-symbol"></i>
+                <i class="far fa-hand-scissors hand-symbol"></i>
+                <i class="far fa-hand-lizard hand-symbol"></i>
+                <i class="far fa-hand-spock hand-symbol"></i>
+              </div>
+            </section>
+          </section>
+          <section class="reset">
+            <i class="fas fa-sync-alt"></i>
+          </section>
+        </div>
+        <div class="result">
+          <h2 class="result-text"></h2>
+        </div>
+      </section>
+    </main>
     <script src="./script.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/mathusummut/confetti.js/confetti.min.js"></script>
+    <script>
+      let playerC = document.querySelector(".player-controls");
+      playerC.addEventListener("click", function () {
+        if (document.querySelector(".result-text").innerText === "You Won!") {
+          confetti.start();
+        } else {
+          confetti.stop();
+        }
+      });
+
+      let resetEverything = document.querySelector(".reset");
+      resetEverything.addEventListener("click", () => confetti.stop());
+    </script>
   </body>
 </html>
