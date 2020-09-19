@@ -1,0 +1,256 @@
+/* ---------------------------------------------------------------
+CSS Reset
+--------------------------------------------------------------- */
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol,
+ul {
+  list-style: none; }
+
+blockquote,
+q {
+  quotes: none; }
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/* This is a slightly adjusted version of the box-sizing reset for ensuring that components inside an explicitly declared content-box are also content-box'ed */
+html {
+  box-sizing: border-box; }
+
+*,
+*:after,
+*:before {
+  box-sizing: inherit; }
+
+/* ---------------------------------------------------------------
+Variables
+--------------------------------------------------------------- */
+/* Colors Begin */
+/* Colors End */
+/* Font Values Begin */
+/* Font Values End */
+/* Media Queries Begin */
+/* Media Queries End */
+/* ---------------------------------------------------------------
+My Base Styles
+--------------------------------------------------------------- */
+body {
+  font-size: calc(16px + 1vw);
+  line-height: 1.5;
+  margin: 0 auto;
+  padding: 0 32px;
+  font-family: "Space Mono"; }
+
+h1,
+h2,
+h3 {
+  font-family: "Josefin Sans";
+  font-weight: 700; }
+
+h1 {
+  font-size: 1.6rem; }
+
+h2 {
+  font-size: 1.4rem; }
+
+h3 {
+  font-size: 1.2rem; }
+
+label,
+input {
+  display: block; }
+
+a {
+  text-decoration: none;
+  color: #3498db; }
+  a:hover {
+    color: #16527a; }
+
+/* ---------------------------------------------------------------
+Modular Classes
+--------------------------------------------------------------- */
+.flex {
+  display: flex;
+  justify-content: space-between; }
+
+.grid {
+  display: grid; }
+
+.container {
+  max-width: 125ch;
+  margin: 0 auto;
+  padding: 0 2rem; }
+
+/* ---------------------------------------------------------------
+Header
+--------------------------------------------------------------- */
+/* ---------------------------------------------------------------
+Footer
+--------------------------------------------------------------- */
+/* ---------------------------------------------------------------
+Project Specific Styles
+--------------------------------------------------------------- */
+body {
+  background: whitesmoke; }
+
+main h2 {
+  font-size: 1.5rem; }
+
+.container {
+  max-width: 37rem; }
+
+.game {
+  background-color: white;
+  border-radius: 10px;
+  height: 100vh;
+  box-shadow: 0px 0px 5px 1px gray; }
+
+.game-title {
+  background-color: dodgerblue;
+  color: white;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  padding: 2rem 2rem 2rem 3rem; }
+  .game-title h1 {
+    font-size: 2rem; }
+
+.player,
+.computer,
+.reset {
+  margin: 2rem 1rem;
+  cursor: pointer; }
+
+.player-controls,
+.computer-controls {
+  flex-wrap: wrap;
+  font-size: 3rem;
+  margin: 1rem 0; }
+
+.player-controls {
+  color: dodgerblue; }
+
+.computer-controls {
+  color: #eb2b34; }
+
+.result-text {
+  font-size: 3rem;
+  text-align: center; }
+
+.player-text-blue {
+  color: dodgerblue; }
+
+.computer-text-red {
+  color: #eb2b34; }
+
+/*# sourceMappingURL=style.css.map */
