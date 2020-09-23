@@ -135,7 +135,7 @@ label {
   display: inline-block;
   position: absolute;
   right: 12px;
-  top: 66%;
+  top: 50%;
   transform: translateY(-50%);
   z-index: 99;
   font-size: 0.75rem;
