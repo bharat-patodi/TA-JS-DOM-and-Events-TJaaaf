@@ -1,58 +1,120 @@
-// 1. Change the title of the page to `Hello AltCampus!`
 
-// 2. Select the element using the children property:
+const createLayout = () => {
+  let body = document.body;
 
-//    - Select the `h1` element and change the value to `Learning DOM`
+  // Container
+  let container = document.createElement("div");
+  container.classList.add("container");
+  body.append(container);
 
-//    - Select the first `li` element inside the `ul` with class `topics` and change the innerText to `all about document`
-//    - Select the input element with name `email`
+  // Title
 
-// 3. Log the number (using console.log) of children of all the `li` element inside the ul with class `topics`
+  let h1 = document.createElement("h1");
+  h1.innerText = "Flip Out";
+  container.append(h1);
 
-// 4. Select the first input using the `type` selector and store them in variable named `emailInput`
+  // Boxes wrapper
+  let wrapper = document.createElement("div");
+  wrapper.classList.add("wrapper");
+  container.append(wrapper);
+  wrapper.style.display = "grid";
+  wrapper.style.gridTemplateColumns = "repeat(4, 1fr)";
+  wrapper.style.gridGap = "1.5rem";
 
-// 5. Select the ul element using class selector and store in `topics`
+  // A standard box template (not added to the DOM)
+  let box = document.createElement("div");
+  box.innerText = "Yo";
+  box.style.backgroundColor = "var(--Navy)";
+  box.style.padding = "2rem 1rem";
+  box.style.textAlign = "center";
+  box.style.fontSize = "3rem";
+  box.style.fontWeight = "700";
+  box.style.boxShadow = "0px 0px 5px 0.2px black";
+  box.style.color = "#ecf0f1";
+  box.classList.add("box");
 
-// 6. Select the first label element and store in `label`
+  // content
+  content = {
+    brands: [
+      "gitkraken",
+      "github",
+      "gitlab",
+      "firefox-browser",
+      "fort-awesome",
+      "keybase",
+      "napster",
+      "meetup",
+      "reddit",
+      "product-hunt",
+      "slack",
+      "sketch",
+      "trello",
+      "twitter",
+      "whatsapp",
+      "youtube",
+      "discord",
+      "git",
+      "figma",
+      "fonticons",
+    ],
+    js: ["js", "grunt", "gulp", "npm", "node-js", "react", "vuejs", "jsfiddle"],
+    coding: [
+      "rust",
+      "sass",
+      "js",
+      "php",
+      "raspberry-pi",
+      "markdown",
+      "erlang",
+      "css3-alt",
+      "python",
+      "html5",
+      "java",
+      "bootstrap",
+      "laravel",
+      "less",
+    ],
+  };
 
-// 7. Select the input of type `checkbox` with the `id` selector and store in `inputCheckbox`
+  // filling the content inside the boxes randomly
+  let newArr = [...content.brands];
+  let reducedContentArr = [];
+  while (reducedContentArr.length < 8) {
+    let random1 = Math.floor(Math.random() * 20);
+    if (newArr[random1]) {
+        reducedContentArr.push(newArr[random1]);
+    }
+    delete newArr[random1];
+  };
 
-// 8. Select the input of type password using Attribute selectors. (eg: input[type="text"]) and store in `password`
+  // Doubling the content
+  reducedContentArr = reducedContentArr.concat(reducedContentArr);
 
-// 9. Select the input using the placeholder attribute selector with value `password` and store in `attrPassword`
+  // Randomize the array
+  console.log(reducedContentArr);
+  let randomizedReduced = [];
+  let n = reducedContentArr.length;
+  while(randomizedReduced.length < reducedContentArr.length) {
+      let rando = Math.floor(Math.random() * n);
+      if (reducedContentArr[rando]) {
+          randomizedReduced.push(reducedContentArr[rando]);
+      };
+      delete reducedContentArr[rando];
+  }
+  console.log(reducedContentArr);
+  console.log(randomizedReduced);
 
-// 10. Select all the `li` element and store in `allTopics`
 
-// 11. Select all the input element of any type and store in `allInput`
+  // Adding the boxes
+  for (let i = 1; i <= 16; i++) {
+    let clonedBox = box.cloneNode(true);
+    wrapper.append(clonedBox);
+    clonedBox.classList.add(`box${i}`);
 
-// 12. Use forEach to console the `innerText` property of all the li element in `allTopics` variable.
+    clonedBox.innerHTML = `<i class='fab fa-${
+      randomizedReduced[i-1]
+    } fa-shadow'></i>`;
+  }
+}
 
-// 13. Select all the elements with class `list` and store in variable `listOfSelectedTopics`
-
-// 14. Select the first li element inside the `ul` element using `>` (direct child) and store in `firstLi`
-
-// 15. Select all the img element and log the number of element saying `The total number of img element is ---`
-
-// 16. Select all the `p` element and store in `allPElement`
-
-// 17. Select all the buttons and log the count of buttons.
-
-// 18. Select all the `label` element and log the count.
-
-// 19. Select all the elements with `id` of `test`
-
-// 20. Select the first element with id `test` using `getElementById`
-
-// 21. Select the parent element of the element stored in `topics` variable (#5) and log the element.
-
-// 22. Select the next element sibling of the element stored in `topics` variable (#5) and log the element.
-
-// 23. Select the previous element sibling of the element stored in `topics` variable (#5) and change the `innerText` property to `Learning About Walking the DOM`.
-
-// 24. Select the first element child of the element stored in `topics` variable (#5) and change the `innerText` property of the element to `This is the first child element`.
-
-// 25. Select the last element child of the element stored in `topics` variable (#5) and log the `typeof` the element.
-
-// 26. Select the element with type `fieldset` and store in a variable named `fieldsetElm`.
-
-// 27. Select the parent element of the element stored in `fieldsetElm` variable (#5) and log the `typeof` the element.
+createLayout();
