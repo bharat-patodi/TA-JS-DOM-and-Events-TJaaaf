@@ -1,0 +1,244 @@
+/* ---------------------------------------------------------------
+CSS Reset (minified)
+--------------------------------------------------------------- */
+
+a,
+abbr,
+acronym,
+address,
+applet,
+article,
+aside,
+audio,
+b,
+big,
+blockquote,
+body,
+canvas,
+caption,
+center,
+cite,
+code,
+dd,
+del,
+details,
+dfn,
+div,
+dl,
+dt,
+em,
+embed,
+fieldset,
+figcaption,
+figure,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hgroup,
+html,
+i,
+iframe,
+img,
+ins,
+kbd,
+label,
+legend,
+li,
+mark,
+menu,
+nav,
+object,
+ol,
+output,
+p,
+pre,
+q,
+ruby,
+s,
+samp,
+section,
+small,
+span,
+strike,
+strong,
+sub,
+summary,
+sup,
+table,
+tbody,
+td,
+tfoot,
+th,
+thead,
+time,
+tr,
+tt,
+u,
+ul,
+var,
+video {
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* This is a slightly adjusted version of the box-sizing reset for ensuring that components inside an explicitly declared content-box are also content-box'ed */
+
+html {
+  box-sizing: border-box;
+}
+*,
+*:after,
+*:before {
+  box-sizing: inherit;
+}
+
+/* ---------------------------------------------------------------
+Variables
+--------------------------------------------------------------- */
+
+:root {
+  /* Colors Begin */
+  --Haldi: #ffc600;
+  --Navy: #001f3f;
+  --Blue: #0074d9;
+  --Aqua: #7fdbff;
+  --Lime-Green: #01ff70;
+  --Yellow: #ffdc00;
+  --SunFlower: #f1c40f;
+  --Orange: #ff851b;
+  --Laung: #272727;
+  /* Colors End */
+
+  /* Font Values Begin */
+  --Primary-Font: "Roboto";
+  --Secondary-Font: "Lato";
+  /* Font Values End */
+}
+
+/* ---------------------------------------------------------------
+My Base Styles
+--------------------------------------------------------------- */
+
+body {
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 auto;
+  background-color: var(--Aqua);
+}
+
+h1 {
+  font-size: 5rem;
+  text-align: center;
+  padding: 2rem 1rem;
+  text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 1.4rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+label,
+input {
+  display: block;
+}
+
+/* ---------------------------------------------------------------
+Modular Classes
+--------------------------------------------------------------- */
+.flex {
+  display: flex;
+}
+
+.container {
+  max-width: 150ch;
+  margin: 0 auto;
+}
+
+/* ---------------------------------------------------------------
+Project Specific Styles
+--------------------------------------------------------------- */
+
+.fa-shadow {
+    filter: drop-shadow(0px 0px 3px #999);
+}
+
+.box:hover i {
+    /* transform: translate(); */
+}
+
+/* TODO: This is copied code. Need to understand this before I can use it */
+
+/* i.fab {
+    background: -webkit-linear-gradient(225deg, rgb(251, 175, 21), rgb(251, 21, 242),
+    rgb(21, 198, 251)) 0% 0% / 300% 300%;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: 4s ease 0s infinite normal none running fontgradient;
+    animation: fontgradient 4s ease infinite;
+    }
+    @keyframes fontgradient {
+    0%{background-position:0% 92%}
+    50%{background-position:100% 9%}
+    100%{background-position:0% 92%}
+} */
+
+/* ---------------------------------------------------------------
+Media Queries
+--------------------------------------------------------------- */
+
+/* Small devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+    .box {
+        font-size: 1rem;
+    }
+}
