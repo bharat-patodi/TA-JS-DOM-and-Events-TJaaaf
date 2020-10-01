@@ -3,10 +3,32 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Books for learning JavaScript</title>
-    <link rel="stylesheet" href="style.css" />
+    <title>ToDo List</title>
+    <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap" rel="stylesheet">
   </head>
-  <body>
+  <body class="movie-watch-list">
+    <div class="container">
+      <div class="todo-list">
+        <h1>todos</h1>
+        <form>
+          <input name="movie-input">
+          <!-- <input type="submit" name="submit" value="Add"> -->
+        </form>
+        <ul class="movie-watch-list__list">
+        </ul>
+        <footer>
+          <ul id="filters">
+            <li>0 items left</li>
+            <li id="show-all">All</li>
+            <li id="show-active">Active</li>
+            <li id="show-completed">Completed</li>
+            <li id="clear-completed">Clear Completed</li>
+          </ul>
+        </footer>
+      </div>
+    </div>
     <script src="./script.js"></script>
+    <script src="https://kit.fontawesome.com/43da756c39.js" crossorigin="anonymous"></script>
   </body>
 </html>
