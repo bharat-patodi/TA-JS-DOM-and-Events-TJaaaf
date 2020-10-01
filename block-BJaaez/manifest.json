@@ -1,0 +1,11 @@
+{
+    "name": "Todo List App",
+    "description": "Base Level Extension",
+    "permissions": ["storage"],
+    "version": "1.0",
+    "manifest_version": 2,
+    "chrome_url_overrides": {
+        "newtab": "code/index.html"
+    },
+    "content_security_policy": "script-src 'self' https://kit.fontawesome.com; object-src 'self'"
+}
